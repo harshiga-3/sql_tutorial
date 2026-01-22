@@ -64,4 +64,23 @@ select * from Employee where name Like '__b%';
 
 select * from Employee where name Like 'A\%%';
 
+update Employee  set dept="Information" where dept="IT";
+update Employee set salary=100000,salary=600000 where salary>30000 and salary<40000;
+select * from Employee;
+
+Delete From Employee where id=2;
+select * from Employee;
+
+select Distinct salary from Employee;
+
+select * from  Employee order by salary,name;
+select * from Employee order by (
+case dept
+when 'ECE' then 1
+when 'EEE' then 2
+when 'Information' then 3
+else 4
+end );
+
+
 
